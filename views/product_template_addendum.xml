@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="product_template_addendum_view_form" model="ir.ui.view">
+        <field name="name">product.template.addendum.view.form</field>
+        <field name="model">product.template.addendum</field>
+        <field name="arch" type="xml">
+            <form string="Addendum Form">
+                <sheet>
+                    <group string="Datos addenda por producto">
+                        <field name="addendum_id" string="Addenda" style="width: 35%%" />
+                        <field name="name" invisible="1"/>
+                        <field name="codeEAN" style="width: 35%%" string="Código EAN" attrs="{'invisible':[('name','=','Hemsa')]}" />
+                        <field name="codeSKU" style="width: 35%%" string="Código SKU" attrs="{'invisible':[('name','=','Hemsa')]}" />
+                        <field name="language" style="width: 35%%" string="Idioma de la descripción" attrs="{'invisible':[('name','in',('City Fresko','Hemsa','Grupo Comercial'))]}" />                       
+                    </group>
+                    <group string="Datos addenda por movimiento" attrs="{'invisible':[('name','not in',('Coppel','Hemsa'))]}">
+                        <field name="codInt" style="width: 35%%" string="Código del artículo cliente" attrs="{'invisible':[('name','not in','Hemsa')]}" />
+                        <field name="codExt" style="width: 35%%" string="Código del artículo proveedor" attrs="{'invisible':[('name','not in','Hemsa')]}" />
+                        <field name="codeCoppel" style="width: 35%%" string="Código del producto(Asignado por Coppel)" attrs="{'invisible':[('name','not in','Coppel')]}" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_template_addendum_view_tree" model="ir.ui.view">
+        <field name="name">product.template.addendum.view.tree</field>
+        <field name="model">product.template.addendum</field>
+        <field name="arch" type="xml">
+            <tree string="Session Tree">
+                <field name="name" string="Nombre"/>
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

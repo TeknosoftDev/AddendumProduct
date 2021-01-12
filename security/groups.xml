@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="adendaproducto_group" model="res.groups">
+        <field name="name">AdendaProducto / Manager</field>
+    </record>
+</odoo>

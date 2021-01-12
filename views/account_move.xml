@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="account_move_view_form" model="ir.ui.view">
+        <field name="name">account.move.view.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='company_id']" position="after">
+                    <field name="additional_data" optional="show" string="Información adicional" />
+            </xpath>
+            <xpath expr="//field[@name='line_ids']/tree/field[@name='company_id']" position="after">
+                    <field name="additional_data" optional="show" string="Información adicional" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

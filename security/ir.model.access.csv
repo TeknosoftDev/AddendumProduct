@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+session_manager,session manager,model_product_template_addendum,adendaproducto_group,1,1,1,1
+session_read_all,session all,model_product_template_addendum,,1,1,1,1
+
+
